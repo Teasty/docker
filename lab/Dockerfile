@@ -13,5 +13,5 @@ RUN usermod -g likhachev andrey
 RUN chown andrey:likhachev /var/www/company.com
 RUN sed -i 's~/var/www/html~/var/www/company.com~g' /etc/nginx/sites-enabled/default
 RUN sed -i 's/www-data/andrey/g' /etc/nginx/nginx.conf
-RUN service nginx restart
+CMD ['nginx -g deamon off']
  
